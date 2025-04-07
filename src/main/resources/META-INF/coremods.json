@@ -1,8 +1,0 @@
-{
-	"Bee": "asm/Bee.js",
-	"BeeRenderer": "asm/BeeRenderer.js",
-	"Level": "asm/Level.js",
-	"NavigationFix": "asm/NavigationFix.js",
-	"RandomPos": "asm/RandomPos.js",
-	"TurtleEgg": "asm/TurtleEgg.js"
-}

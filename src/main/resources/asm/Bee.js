@@ -1,4 +1,4 @@
-var asmapi = Java.type('net.minecraftforge.coremod.api.ASMAPI')
+var asmapi = Java.type('net.neoforged.coremod.api.ASMAPI')
 var opc = Java.type('org.objectweb.asm.Opcodes')
 var AbstractInsnNode = Java.type('org.objectweb.asm.tree.AbstractInsnNode')
 var InsnNode = Java.type('org.objectweb.asm.tree.InsnNode')
@@ -95,7 +95,7 @@ function patch_finalize(obj) {
 
 // add setNoGravity call
 function insert_finalize(cobj, fn) {
-	var desc = "(Lnet/minecraft/world/level/ServerLevelAccessor;Lnet/minecraft/world/DifficultyInstance;Lnet/minecraft/world/entity/EntitySpawnReason;Lnet/minecraft/world/entity/SpawnGroupData;)Lnet/minecraft/world/entity/SpawnGroupData;"
+	var desc = "(Lnet/minecraft/world/level/ServerLevelAccessor;Lnet/minecraft/world/DifficultyInstance;Lnet/minecraft/world/entity/MobSpawnType;Lnet/minecraft/world/entity/SpawnGroupData;)Lnet/minecraft/world/entity/SpawnGroupData;"
 	var obj = new MethodNode(opc.ACC_PUBLIC, fn, desc, null, null)
 	cobj.methods.add(obj)
 	setNoGravity(obj, null)
